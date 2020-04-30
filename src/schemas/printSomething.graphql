@@ -1,0 +1,3 @@
+type Mutation {
+    printSomething(word: String!): String
+}

@@ -1,13 +1,12 @@
 import app from '../app'
 import supertest from 'supertest'
 
-const graphQLRequest = (query: any, variables: any = null) => {
-    return supertest(app)
-      .post('/graphql')
-      .send({
-        variables,
-        query
-      })
-  }
+const graphQLRequest = (query: string) => {
+  return supertest(app)
+    .post('/graphql')
+    .send({
+      query
+    })
+}
 
 export default graphQLRequest
